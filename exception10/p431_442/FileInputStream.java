@@ -1,0 +1,19 @@
+package exception10.p431_442;
+
+public class FileInputStream implements AutoCloseable {
+	// AutoClose를 구현하는 class
+	
+	private String file;
+	
+	public FileInputStream(String file) {
+		this.file = file;
+	}
+	public void read() {
+		System.out.println(file+"을 읽습니다.");
+	}
+	
+	@Override
+	public void close() throws Exception{
+		System.out.println(file+"을 닫습니다.");
+	}
+}
